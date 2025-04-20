@@ -1,0 +1,204 @@
+@font-face {
+  font-family: 'TikTokFont';
+  src: url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Regular.woff2?_default_font=1&v=2)
+      format('woff2'),
+    url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Regular.woff?_default_font=1&v=2)
+      format('woff'),
+    url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Regular.otf?_default_font=1&v=2)
+      format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'TikTokFont';
+  src: url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Bold.woff2?_default_font=1&v=2)
+      format('woff2'),
+    url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Bold.woff?_default_font=1&v=2)
+      format('woff'),
+    url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_fonts/TikTokFont-Bold.otf?_default_font=1&v=2)
+      format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+body {
+  background-color: #272c73;
+  color: #fff;
+  font-family: 'TikTokFont', sans-serif;
+  font-weight: bold;
+  user-select: none;
+}
+
+.loading {
+  background-color: #272c73;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 80px;
+  left: 0;
+  z-index: 88889;
+}
+
+.tiktok {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background: rgb(77, 232, 244);
+  border-radius: 50%;
+  animation: leftToRight 1s ease-in-out infinite;
+  transform: scale(1);
+  mix-blend-mode: darken;
+}
+
+.tiktok.red {
+  background: rgb(253, 62, 62);
+  animation: rightToLeft 1s ease-in-out infinite;
+}
+
+.load {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes leftToRight {
+  0% { left: 0; }
+  25% { transform: scale(1.2); }
+  50% { left: 18px; }
+  75% { transform: scale(0.8); }
+  100% { left: 0; }
+}
+
+@keyframes rightToLeft {
+  0% { right: 0; }
+  25% { transform: scale(0.8); }
+  50% { right: 18px; }
+  75% { transform: scale(1.2); }
+  100% { right: 0; }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid #e54935;
+}
+
+nav img {
+  width: 100px;
+}
+
+.xload nav .title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.label {
+  margin: 15px 0;
+  padding: 4px;
+  display: flex;
+  background-color: #0dae5f;
+  border-radius: 10px;
+
+  box-shadow: 0 25px 20px -15px rgba(0, 0, 0, 0.5);
+}
+
+
+.xload .gifts .row > div {
+  width: 50%; 
+  padding: 5px !important;
+  box-sizing: border-box; 
+}
+
+.gifts .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: calc(var(--bs-gutter-x)* .5 - 5px);
+}
+
+
+.xload .label .item {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.xload .label .item.active {
+  background-color: #e54935;
+}
+
+.gifts .row {
+  padding: calc(var(--bs-gutter-x)* .5 - 5px);
+}
+
+.xload .gifts .row > div {
+  padding: 5px !important;
+}
+
+.gifts .item {
+  border: 1px solid #222;
+  padding: 0px;
+  border-radius: 5px;
+  background-color: #272c73;
+  box-shadow: 0 25px 20px -15px rgba(0, 0, 0, 0.5);
+
+}
+
+.xload .gifts .item img {
+  width: 100%;
+}
+
+.xload .gifts .item.active {
+  background-color: #272c73;
+  border-color: #272c73;
+}
+
+.loading-spinner {
+  width: 80px;
+  height: 80px;
+  border: 8px solid #f3f3f3;
+  border-top: 9px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-spinner.red {
+  border-top: 4px solid red;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  .label-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.label-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.full-width-image {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.full-width-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
