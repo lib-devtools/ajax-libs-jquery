@@ -17,7 +17,7 @@
         selectedItems.delete(item);
       } else {
         if (selectedItems.size >= 3) {
-          speak("Only 3 items allowed. Deselect one to choose another.");
+          speak("Only 3 items allowed, Deselect one to choose another.");
           return;
         }
         item.classList.add("selected");
